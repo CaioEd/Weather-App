@@ -1,0 +1,16 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 7rem;
+    line-height: 1.5;
+}
+
+.mainContainer h2{
+    font-size: 60px;
+}
+
+.mainContainer span{
+    font-size: 25px;
+}

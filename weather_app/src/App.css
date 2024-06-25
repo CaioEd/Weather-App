@@ -1,0 +1,11 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+html{
+  background-image: url(https://raw.githubusercontent.com/fireclint/weather-app-react/main/src/assets/sunset.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

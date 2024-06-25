@@ -1,0 +1,15 @@
+.searchInput {
+    margin-top: 4rem;
+    width: 23rem;
+    height: 3rem;
+    font-size: 18px;
+
+    border: 2px solid white;
+    border-radius: 20px;
+
+    text-align: center;
+
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}

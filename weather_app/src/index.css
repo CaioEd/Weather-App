@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color: white;
+  background-color: #f0f0f0;
+}
+
+::placeholder{
+  font-size: 18px;
+
+  padding-left: 1rem;
+  color: #f0f0f0;
+}
