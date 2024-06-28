@@ -2,6 +2,8 @@ import { useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
+import SearchInput from './components/SearchInput'
+import WeatherInfo from './components/WeatherInfo'
 import WeatherDetails from './components/WeatherDetails'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           if (response.data && response.data.length > 0) {
             setData(response.data);
             console.log(response.data[0].name);
+            console.log(response.data[0].lat)
+            console.log(response.data[0].lon)
           } else {
             console.error('No data found for the specified location');
           }
@@ -34,21 +38,9 @@ function App() {
   return (
     <>
       <h1>Weather App</h1>
-
-      <input type="search" className='searchInput' name="searchInput" id="searchInput" placeholder='Enter Location' value={location} onChange={event => setLocation(event.target.value)}
-      onKeyDown={searchLocation}/>
-
-      <div className="mainContainer">
-            {data[0] ? (
-              <>
-                <span>{data[0].name}</span>
-              </>
-          ) : (
-            <p></p>
-          )}
-            <h2>18°C</h2>
-            <span>Cloudy</span>
-      </div>
+      <SearchInput location={location} setLocation={setLocation} searchLocation={searchLocation}/>
+      
+      <WeatherInfo data={data}/>
   
       <WeatherDetails/>
       
