@@ -9,3 +9,36 @@ html{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 7rem;
+    line-height: 1.5;
+}
+
+.mainContainer h2{
+    font-size: 60px;
+}
+
+.mainContainer span{
+    font-size: 25px;
+}
+
+.searchInput {
+    margin-top: 4rem;
+    width: 23rem;
+    height: 3rem;
+    font-size: 18px;
+
+    border: 2px solid white;
+    border-radius: 20px;
+
+    text-align: center;
+
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
