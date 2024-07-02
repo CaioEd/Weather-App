@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WeatherInfo = ({data}) => {
+const WeatherInfo = ({data, data_2}) => {
   return (
     <>
         <div className="mainContainer">
@@ -11,8 +11,16 @@ const WeatherInfo = ({data}) => {
           ) : (
             <p></p>
           )}
-            <h2>18°C</h2>
-            <span>Cloudy</span>
+
+          {data_2.main && (
+          <div>
+            <h2>{data_2.main.temp}°K</h2>
+            <span>{data_2.weather[0].description}</span>
+          </div>
+        )}
+        {!data_2.main && (
+          <p></p>
+        )}
         </div>
     </>
   )
