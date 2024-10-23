@@ -8,7 +8,7 @@ const WeatherDetails = ({data_2}) => {
         {data_2.main && (
         <>
         <div className="details">
-          <h3>{data_2.main.feels_like}</h3>
+          <h3>{data_2.main.feels_like} C°</h3>
           <span>Feels like</span>
         </div>
 

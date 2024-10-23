@@ -16,7 +16,7 @@ function App() {
   const [lat, setLat] = useState('')
   const [lon, setLon] = useState('')
 
-  const geocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${API_KEY}`
+  const geocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${API_KEY}&units=metric`
 
   const searchLocation = async (event) => {
     if (event.key === 'Enter') {
@@ -28,7 +28,7 @@ function App() {
           setLat(lat);
           setLon(lon);
           
-          const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+          const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
           const weatherResponse = await axios.get(weatherUrl);
 
           if (weatherResponse.data) {

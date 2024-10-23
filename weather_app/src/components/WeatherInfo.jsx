@@ -14,8 +14,8 @@ const WeatherInfo = ({data, data_2}) => {
 
           {data_2.main && (
           <div>
-            <h2>{data_2.main.temp}°K</h2>
-            <span>{data_2.weather[0].description}</span>
+            <h2>{data_2.main.temp}°C</h2>
+            <span className='weather-condition'>{data_2.weather[0].description}</span>
           </div>
         )}
         {!data_2.main && (

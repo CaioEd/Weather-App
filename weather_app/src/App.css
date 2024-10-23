@@ -59,3 +59,8 @@ html{
 .weatherDetails h3{
     font-size: 25px;
 }
+
+.weather-condition {
+    font-weight: bold;
+    text-transform: uppercase;
+}
