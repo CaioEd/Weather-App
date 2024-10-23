@@ -6,6 +6,8 @@ import SearchInput from './components/SearchInput'
 import WeatherInfo from './components/WeatherInfo'
 import WeatherDetails from './components/WeatherDetails'
 
+import API_KEY from './ApiKey'
+
 function App() {
 
   const [data, setData] = useState([])
@@ -14,7 +16,7 @@ function App() {
   const [lat, setLat] = useState('')
   const [lon, setLon] = useState('')
 
-  const geocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=`
+  const geocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${API_KEY}`
 
   const searchLocation = async (event) => {
     if (event.key === 'Enter') {
@@ -26,7 +28,7 @@ function App() {
           setLat(lat);
           setLon(lon);
           
-          const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=`;
+          const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
           const weatherResponse = await axios.get(weatherUrl);
 
           if (weatherResponse.data) {
